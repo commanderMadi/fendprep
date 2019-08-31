@@ -10,7 +10,7 @@ body {
     padding: 3em;
     display: flex;
     width: 60%;
-    margin: 1.5em auto;
+    margin: 0 auto;
     flex-flow: row wrap;
     align-items: flex-start;
     background-color: rgb(205, 205, 211); /* Fallback for older browsers */
