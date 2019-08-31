@@ -28,12 +28,12 @@ body {
   }
   
   .form-group label {
-    display: inline-block;
+    display: block;
     margin-bottom: 0.7em;
   }
   
   .form-group input {
-    min-width: 100%;
+    width: 100%;
     padding: 0.8em;
     border: 0.5px solid rgb(212, 212, 212);
     border-radius: 4px;
@@ -84,3 +84,8 @@ body {
     border-radius: 3px;
   }
   
+  @media only screen and (max-width: 600px) {
+    .content {
+      width: 100%;
+    }
+  }
