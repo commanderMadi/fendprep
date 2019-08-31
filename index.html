@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Udacity Frontend Exercise v1.61</title>
+  <!--Normalize CSS by Nicolas Gallagher -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <section class="content">
+    <form role="form" aria-label="Sign Up" id="signup-form">
+      <section class="form-group">
+        <label for="fullname">Full Name (Optional)</label>
+        <input type="text" id="fullname" tabindex="1" />
+      </section>
+
+      <section class="form-group">
+        <label class="mandatory" for="email">Email</label>
+        <input class="required" aria-required="true" type="email" id="email" data-err-message="Email cannot be left blank"
+          data-err-field="email-empty-error" tabindex="2" />
+        <label id="email-empty-error"></label>
+      </section>
+
+      <section class="form-group">
+        <label class="mandatory" for="username">Username</label>
+        <input class="required" aria-required="true" type="text" id="username" data-err-message="Username cannot be left blank"
+          data-err-field="username-empty-error" tabindex="3" />
+        <label id="username-empty-error"></label>
+      </section>
+
+      <section class="form-group">
+        <label class="mandatory" for="password">Password</label>
+        <input class="required" aria-required="true" type="password" id="password" data-err-message="Password cannot be left blank"
+          data-err-field="password-empty-error" tabindex="4" />
+        <label id="password-empty-error"></label>
+      </section>
+
+      <input type="submit" value="Sign Up" tabindex="5" />
+    </form>
+
+    <div id="note">Fields that are marked with <span style="color:red">*</span> are mandatory.</div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+  .content {
+    padding: 3em;
+    display: flex;
+    max-width: 60%;
+    margin: 1.5em auto;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    background-color: rgb(205, 205, 211); /* Fallback for older browsers */
+    background-color: rgba(205, 205, 211, 0.3);
+    border-radius: 0.8em;
+
+  }
+
+  #signup-form {
+    width: 100%;
+  }
+  
+  .form-group {
+    margin: 1em 0.5em;
+  }
+  
+  .form-group label {
+    display: inline-block;
+    margin-bottom: 0.7em;
+  }
+  
+  .form-group input {
+    min-width: 100%;
+    padding: 0.8em;
+    border: 0.5px solid rgb(212, 212, 212);
+    border-radius: 4px;
+  }
+
+  input[type=submit] {
+    padding: 0.7em;
+    float: right;
+    border-radius: 5px; 
+    cursor: pointer;
+    margin-bottom: 1em;
+  }
+
+  input[type=submit]:hover {
+    background-color: rgb(37, 171, 180);
+    color: #fff;
+  }
+
+  #note {
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 0.7em;
+  }
+
+  .mandatory::after{
+    content: " *";
+  }
+
+  .error-message {
+    font-size: 0.7em;
+    color: #ff0000;
+    font-style: italic;
+    margin-top: 0.9em;
+  }
+
+  .show {
+    display: block !important;
+  }
+
+  .user-creation {
+    text-align: center;
+    background-color: rgb(217,83,79);
+    background-color: rgba(217,83,79, 0.7);
+    color: #fff;
+    padding: 1em;
+    width: 60%;
+    margin: 1em auto;
+    border-radius: 3px;
+  }
+  
