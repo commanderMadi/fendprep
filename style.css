@@ -9,7 +9,7 @@ body {
   .content {
     padding: 3em;
     display: flex;
-    max-width: 60%;
+    width: 60%;
     margin: 1.5em auto;
     flex-flow: row wrap;
     align-items: flex-start;
