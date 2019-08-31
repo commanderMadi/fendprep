@@ -28,19 +28,6 @@ function validate(field, message) {
   field.insertAdjacentElement('afterend', ERRMSG);
 }
 
-function post(url, data, cb) {
-  // Join the URL with the endpoint
-  url = API_URL + API_PATH_SIGNUP;
-  const xhr = new XMLHttpRequest();
-  xhr.onload = function () {
-    cb(JSON.parse(this.responseText));
-  }
-  xhr.open('POST', url)
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(JSON.stringify(data))
-}
-
-
 const submitForm = function () {
   const data = {
     username: USERNAME_FIELD.value,
@@ -49,9 +36,17 @@ const submitForm = function () {
 
   if (USERNAME_FIELD.value && PW_FIELD.value &&
     PW_FIELD.value.length >= 8 && EMAIL_FIELD.value) {
-    post(API_URL,data, function (res) {
-      userCreationStatus(res);
-    });
+      fetch(`${API_URL}${API_PATH_SIGNUP}`,
+      {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type' : 'application/json'
+        }
+      })
+      .then(res => res.json())
+      .then(jsonData => userCreationStatus(jsonData))
+      .catch(err => new Error("Something wrong happend" + err))
   }
 }
 
